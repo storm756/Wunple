@@ -1,5 +1,1 @@
-.hero{background-image:url('/images/homepage-hero.png')!important}
-.aboutHero,.contactHero{background-image:linear-gradient(#0005,#0005),url('/images/about-contact-hero.png')!important}
-.cards article:nth-child(1) .product{background:url('/images/product-coat-ease.png') center/contain no-repeat!important}
-.cards article:nth-child(2) .product{background:url('/images/product-itch-relief.png') center/contain no-repeat!important}
-.cards article:nth-child(1) .product strong,.cards article:nth-child(1) .product span,.cards article:nth-child(2) .product strong,.cards article:nth-child(2) .product span{display:none}
+/* Overrides now consolidated in globals.css */
