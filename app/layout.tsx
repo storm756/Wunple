@@ -27,6 +27,9 @@ export const metadata: Metadata = {
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
     ],
     shortcut: "/favicon.ico"
+  },
+  verification: {
+    google: "googlea2e56dc0fa9ed206"
   }
 };
 
