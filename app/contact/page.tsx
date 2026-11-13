@@ -63,18 +63,20 @@ export default function ContactPage() {
             <div className="hero-scrim"></div>
           </div>
 
-          <div className="container page-hero-content">
-            <div className="hero-pill-tag light">
-              <span className="pill-dot">●</span>
-              <span>GET IN TOUCH</span>
+          <div className="container page-hero-container">
+            <div className="page-hero-content">
+              <div className="hero-pill-tag light">
+                <span className="pill-dot">●</span>
+                <span>GET IN TOUCH</span>
+              </div>
+              <h1 className="page-hero-title">
+                If animals could talk,<br />
+                they’d talk to us!
+              </h1>
+              <p className="page-hero-subtitle">
+                Have a question about Coat Ease, Itch Relief, Selamide Spot On, or WUNCEF? Need advice for your pet? Our friendly team is always here to help.
+              </p>
             </div>
-            <h1 className="page-hero-title">
-              If animals could talk,<br />
-              they’d talk to us!
-            </h1>
-            <p className="page-hero-subtitle">
-              Have a question about Coat Ease, Itch Relief, or Selamide Spot On? Need advice for your pet? Our friendly team is always here to help.
-            </p>
           </div>
         </section>
 
@@ -193,7 +195,7 @@ export default function ContactPage() {
                     <div className="info-item-content">
                       <strong>Office Address</strong>
                       <p>MJ Enterprises</p>
-                      <p>office no-4, Wangad building plot no-115, sector-19, ulwe, Navi Mumbai – 410206</p>
+                      <p>Marigold Appt, Shop No-2, Plot No-7/8, Sector-2, Ulwe – 410206</p>
                     </div>
                   </div>
 

@@ -1,70 +1,66 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getPublishedBlogs } from "@/data/blogs";
 
 export default function NewsBlog() {
-  const articles = [
-    {
-      id: 1,
-      title: "Pet Health, Made Simple: Choosing The Right Shampoo",
-      date: "24 May, 2026",
-      tag: "News",
-      image: "/images/hero-beagle.png",
-      excerpt:
-        "Learn why pH-balanced formulations with natural silk protein and aloe vera prevent flaky skin and keep coats shiny."
-    },
-    {
-      id: 2,
-      title: "Care Tips For Happier Pets: Preventing Fleas & Mites",
-      date: "18 May, 2026",
-      tag: "Care Tips",
-      image: "/images/product-selamide.jpg",
-      excerpt:
-        "Top vet-recommended advice on keeping outdoor and indoor cats safe from external parasites with topical spot-on treatments."
-    },
-    {
-      id: 3,
-      title: "Building Better Bathing Routines For Sensitive Dogs",
-      date: "12 May, 2026",
-      tag: "Grooming",
-      image: "/images/corgi-bath.png",
-      excerpt:
-        "How to turn stressful bath time into a soothing, bonding experience with gentle anti-itch botanicals and warm water."
-    }
-  ];
+  const publishedBlogs = getPublishedBlogs();
+  const displayBlogs = publishedBlogs.slice(0, 3);
 
   return (
     <section className="blog-section" id="blog">
       <div className="blog-container">
         <div className="section-header-centered">
-          <span className="section-subtitle">Pet Care Knowledge</span>
-          <h2 className="section-title">News &amp; Blog</h2>
+          <span className="section-subtitle">Pet Care Knowledge &amp; Routine</span>
+          <h2 className="section-title">News &amp; Educational Blog</h2>
+          <p className="section-desc">
+            Vetted care tips, grooming guidance, and health advice for happy, healthy cats and dogs in India.
+          </p>
         </div>
 
         <div className="blog-grid">
-          {articles.map((item) => (
-            <article key={item.id} className="blog-card">
-              <div className="blog-image-wrapper">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={400}
-                  height={250}
-                  className="blog-img"
-                />
-                <span className="blog-tag">{item.tag}</span>
-              </div>
-              <div className="blog-content">
-                <time className="blog-date">📅 {item.date}</time>
-                <h3 className="blog-title">
-                  <Link href="/about">{item.title}</Link>
-                </h3>
-                <p className="blog-excerpt">{item.excerpt}</p>
-                <Link href="/about" className="blog-read-more">
-                  Read Full Article →
-                </Link>
-              </div>
-            </article>
-          ))}
+          {displayBlogs.map((post) => {
+            const formattedDate = new Date(post.publishDate).toLocaleDateString("en-IN", {
+              day: "numeric",
+              month: "short",
+              year: "numeric"
+            });
+
+            return (
+              <article key={post.slug} className="blog-card">
+                <div className="blog-image-wrapper">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    width={400}
+                    height={250}
+                    className="blog-img"
+                    style={{ objectFit: "cover" }}
+                  />
+                  <span className="blog-tag">{post.category}</span>
+                </div>
+                <div className="blog-content">
+                  <div className="blog-meta-row">
+                    <span className="blog-date">📅 {formattedDate}</span>
+                    <span className="blog-meta-divider">•</span>
+                    <span className="blog-read-time">⏱️ {post.readTime}</span>
+                  </div>
+                  <h3 className="blog-title">
+                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                  </h3>
+                  <p className="blog-excerpt">{post.excerpt}</p>
+                  <Link href={`/blog/${post.slug}`} className="blog-read-more">
+                    Read Full Article →
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+
+        <div className="blog-cta-center">
+          <Link href="/blog" className="btn-view-all-blogs">
+            View All Articles →
+          </Link>
         </div>
       </div>
     </section>

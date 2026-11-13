@@ -95,7 +95,7 @@ export default function Testimonials() {
         >
           <div className="testimonial-content">
             {/* 5 Stars */}
-            <div className="rating-stars" aria-label="5 out of 5 stars">
+            <div className="rating-stars" aria-label="5 out of 5 stars" suppressHydrationWarning>
               {"★".repeat(current.rating)}
             </div>
 

@@ -72,20 +72,21 @@ export default function Footer() {
           <h4 className="footer-heading">Company</h4>
           <ul className="footer-list">
             <li><Link href="/about">About Us</Link></li>
-            <li><Link href="/shop">All Products</Link></li>
-            <li><Link href="/#blog">News & Blog</Link></li>
+            <li><Link href="/products">Products Catalogue</Link></li>
+            <li><Link href="/blog">Pet Care Blog (10 Guides)</Link></li>
             <li><Link href="/contact">Contact Support</Link></li>
           </ul>
         </div>
 
         {/* Useful Links */}
         <div className="footer-col">
-          <h4 className="footer-heading">Useful Links</h4>
+          <h4 className="footer-heading">Formulations</h4>
           <ul className="footer-list">
-            <li><a href={amazonStoreUrl} target="_blank" rel="noopener noreferrer">Coat Ease Shampoo</a></li>
-            <li><a href={amazonStoreUrl} target="_blank" rel="noopener noreferrer">Itch Relief Shampoo</a></li>
-            <li><a href={amazonStoreUrl} target="_blank" rel="noopener noreferrer">Selamide Spot On</a></li>
-            <li><a href={amazonStoreUrl} target="_blank" rel="noopener noreferrer">Amazon Storefront</a></li>
+            <li><Link href="/products/selamide-spot-on">Selamide Spot On (Cat)</Link></li>
+            <li><Link href="/products/wuncef-dry-syrup">WUNCEF® Dry Syrup</Link></li>
+            <li><Link href="/products/chlox-antiseptic-spray">CHLOX Antiseptic Spray</Link></li>
+            <li><Link href="/products/coat-ease">Coat Ease Pet Shampoo</Link></li>
+            <li><a href={amazonStoreUrl} target="_blank" rel="noopener noreferrer">Amazon Storefront ↗</a></li>
           </ul>
         </div>
 
@@ -105,7 +106,7 @@ export default function Footer() {
           <h4 className="footer-heading">Address</h4>
           <div className="address-details">
             <p className="entity-name"><strong>MJ Enterprises</strong></p>
-            <p>office no-4, Wangad building plot no-115, sector-19, ulwe, Navi Mumbai – 410206</p>
+            <p>Marigold Appt, Shop No-2, Plot No-7/8, Sector-2, Ulwe – 410206</p>
             <p className="contact-line">
               <strong>Phone:</strong> <a href="tel:+917718894017">+91 7718894017</a>
             </p>

@@ -27,30 +27,32 @@ export default function AboutPage() {
             <div className="hero-scrim"></div>
           </div>
 
-          <div className="container page-hero-content">
-            <div className="hero-pill-tag light">
-              <span className="pill-dot">●</span>
-              <span>ABOUT WUNPLE</span>
-            </div>
-            <h1 className="page-hero-title">
-              If animals could talk,<br />
-              they’d talk about us!
-            </h1>
-            <p className="page-hero-subtitle">
-              At Wunple, we believe every pet deserves better care, gentler products, and a healthier, happier life. We are here to make pet parenting simpler, safer, and filled with joy.
-            </p>
-            <div className="page-hero-actions">
-              <a
-                href={amazonStoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                Shop on Amazon ↗
-              </a>
-              <Link href="/contact" className="btn-secondary-light">
-                Get in Touch
-              </Link>
+          <div className="container page-hero-container">
+            <div className="page-hero-content">
+              <div className="hero-pill-tag light">
+                <span className="pill-dot">●</span>
+                <span>ABOUT WUNPLE</span>
+              </div>
+              <h1 className="page-hero-title">
+                If animals could talk,<br />
+                they’d talk about us!
+              </h1>
+              <p className="page-hero-subtitle">
+                At Wunple, we believe every pet deserves better care, gentler products, and a healthier, happier life. We are here to make pet parenting simpler, safer, and filled with joy.
+              </p>
+              <div className="page-hero-actions">
+                <a
+                  href={amazonStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Shop on Amazon ↗
+                </a>
+                <Link href="/contact" className="btn-secondary-light">
+                  Get in Touch
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -104,7 +106,7 @@ export default function AboutPage() {
               </div>
               <div className="founder-details">
                 <span className="founder-badge">FOUNDER</span>
-                <h2 className="founder-name">Zubair</h2>
+                <h2 className="founder-name">Juber</h2>
                 <blockquote className="founder-quote">
                   &ldquo;Wunple started with a simple belief: taking care of a pet shouldn’t feel complicated or uncertain. What began with a passion for better pet care has grown into a brand built around quality, trust, and the everyday bond between pets and their parents.&rdquo;
                 </blockquote>
