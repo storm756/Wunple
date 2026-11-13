@@ -2658,11 +2658,9 @@ next-route-announcer {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   color: #0b1a2d;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  font-size: 26px;
-  font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2670,6 +2668,11 @@ next-route-announcer {
   z-index: 10;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
   transition: var(--transition);
+  padding: 0;
+}
+
+.slider-arrow svg {
+  display: block;
 }
 
 .slider-arrow:hover {

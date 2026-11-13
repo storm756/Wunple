@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://wunple.com"),
   title: "Wunple — Better Care. Happier Pets.",
   description:
     "Thoughtfully made pet-care essentials for dogs and cats. Coat Ease shampoo, Itch Relief formula, and targeted Selamide Spot On care.",
@@ -44,6 +45,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Googlebot Favicon Direct HTML Links */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+
         {/* Google Analytics 4 (GA4) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2BD2GYS22N"
