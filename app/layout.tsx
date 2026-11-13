@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -43,6 +44,49 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Google Analytics 4 (GA4) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2BD2GYS22N"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2BD2GYS22N', {
+              page_path: window.location.pathname,
+            });
+
+            // Automated Outbound Lead Tracking (Amazon & WhatsApp)
+            if (typeof document !== 'undefined') {
+              document.addEventListener('click', function(e) {
+                var link = e.target.closest('a');
+                if (!link || !link.href) return;
+                
+                var href = link.href.toLowerCase();
+                if (href.indexOf('amzn.in') !== -1 || href.indexOf('amazon.') !== -1) {
+                  if (typeof window.gtag === 'function') {
+                    window.gtag('event', 'amazon_click', {
+                      event_category: 'Outbound Conversion',
+                      event_label: link.getAttribute('title') || link.innerText.trim() || 'Amazon Purchase',
+                      destination_url: link.href
+                    });
+                  }
+                } else if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp.com') !== -1) {
+                  if (typeof window.gtag === 'function') {
+                    window.gtag('event', 'whatsapp_order_click', {
+                      event_category: 'Direct Lead',
+                      event_label: link.getAttribute('title') || 'WhatsApp Order Inquiry',
+                      destination_url: link.href
+                    });
+                  }
+                }
+              });
+            }
+          `}
+        </Script>
+
         <script
           dangerouslySetInnerHTML={{
             __html: `
