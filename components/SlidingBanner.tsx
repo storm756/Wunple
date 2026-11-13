@@ -105,9 +105,10 @@ export default function SlidingBanner() {
                     <Image
                       src={slide.image}
                       alt={`${slide.title} - ${slide.subtitle}`}
-                      width={1280}
-                      height={486}
+                      width={1024}
+                      height={389}
                       priority={index === 0}
+                      unoptimized
                       className="slider-img"
                     />
                   </div>

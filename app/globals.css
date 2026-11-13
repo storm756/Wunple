@@ -2594,27 +2594,30 @@ next-route-announcer {
 }
 
 /* ==========================================================================
-   Homepage Hero Sliding Banner (1024x389 Aspect Banners)
+   Homepage Hero Sliding Banner (Full-Bleed End-to-End Showcase)
    ========================================================================== */
 .slider-banner-wrapper {
   position: relative;
-  background: #f8fafc;
-  padding: 8px 0 28px 0;
+  background: #ffffff;
+  padding: 0;
   overflow: hidden;
+  width: 100%;
 }
 
 .slider-banner-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   position: relative;
 }
 
 .slider-viewport {
   overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(15, 39, 70, 0.1);
-  border: 1px solid #e2e8f0;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  width: 100%;
 }
 
 .slider-track {
@@ -2655,9 +2658,9 @@ next-route-announcer {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.9);
   color: #0b1a2d;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   font-size: 26px;
   font-weight: 300;
   display: flex;
@@ -2665,7 +2668,7 @@ next-route-announcer {
   justify-content: center;
   cursor: pointer;
   z-index: 10;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
   transition: var(--transition);
 }
 
@@ -2677,36 +2680,68 @@ next-route-announcer {
 }
 
 .slider-arrow-prev {
-  left: 36px;
+  left: 16px;
 }
 
 .slider-arrow-next {
-  right: 36px;
+  right: 16px;
 }
 
 .slider-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-top: 14px;
+  gap: 8px;
+  margin: 0;
+  z-index: 10;
 }
 
 .slider-dot {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: #cbd5e1;
-  border: none;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 .slider-dot.active {
   width: 26px;
   border-radius: 12px;
-  background: #1472e3;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .slider-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+  .slider-arrow-prev {
+    left: 8px;
+  }
+  .slider-arrow-next {
+    right: 8px;
+  }
+  .slider-dots {
+    bottom: 8px;
+    gap: 6px;
+  }
+  .slider-dot {
+    width: 7px;
+    height: 7px;
+  }
+  .slider-dot.active {
+    width: 20px;
+  }
 }
 
 /* ==========================================================================
