@@ -1,31 +1,24 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect } from "react";
+import Script from "next/script";
+
+const INSTA_POSTS = [
+  "https://www.instagram.com/p/Df2cB8YzqOJ/",
+  "https://www.instagram.com/p/DfXtTfZIVMZ/",
+  "https://www.instagram.com/p/DfIRusZExwv/",
+  "https://www.instagram.com/p/DZ0PcydE_GS/"
+];
 
 export default function InstagramFeed() {
   const instagramUrl =
     "https://www.instagram.com/wunple_care?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==";
 
-  const instaPosts = [
-    {
-      id: 1,
-      image: "/images/hero-beagle.png",
-      caption: "Bath day done right with Wunple Coat Ease! 🐶✨ #PetCare"
-    },
-    {
-      id: 2,
-      image: "/images/corgi-bath.png",
-      caption: "Bubble bath happiness for this happy corgi. 🛁🐾 #WunplePets"
-    },
-    {
-      id: 3,
-      image: "/images/banner-selamide.jpg",
-      caption: "Targeted parasite care: keeping curious cats safe & scratch-free! 🐱🌿 #Selamide"
-    },
-    {
-      id: 4,
-      image: "/images/banner-chlox-spray.jpg",
-      caption: "Soothe sensitive skin, hot spots & yeast infections fast. 🐕❤️ #PetWellness"
+  useEffect(() => {
+    if (typeof window !== "undefined" && (window as any).instgrm) {
+      (window as any).instgrm.Embeds.process();
     }
-  ];
+  }, []);
 
   return (
     <section className="instagram-section">
@@ -50,34 +43,62 @@ export default function InstagramFeed() {
           </a>
         </div>
 
-        {/* Instagram Grid Showcase */}
-        <div className="instagram-grid">
-          {instaPosts.map((post) => (
-            <a
-              key={post.id}
-              href={instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="insta-card"
-              title={post.caption}
-            >
-              <div className="insta-img-wrapper">
-                <Image
-                  src={post.image}
-                  alt={post.caption}
-                  width={300}
-                  height={300}
-                  className="insta-img"
-                />
-                <div className="insta-overlay">
-                  <span className="insta-icon">📷</span>
-                  <p className="insta-caption">{post.caption}</p>
+        {/* Real Official Instagram Embed Grid */}
+        <div className="instagram-embed-grid">
+          {INSTA_POSTS.map((url, idx) => (
+            <div key={idx} className="insta-embed-card">
+              <blockquote
+                className="instagram-media"
+                data-instgrm-captioned
+                data-instgrm-permalink={`${url}?utm_source=ig_embed&utm_campaign=loading`}
+                data-instgrm-version="14"
+                style={{
+                  background: "#FFF",
+                  border: 0,
+                  borderRadius: "14px",
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
+                  margin: "0 auto",
+                  maxWidth: "540px",
+                  minWidth: "280px",
+                  padding: 0,
+                  width: "100%"
+                }}
+              >
+                <div style={{ padding: "16px" }}>
+                  <a
+                    href={`${url}?utm_source=ig_embed&utm_campaign=loading`}
+                    style={{
+                      background: "#FFFFFF",
+                      lineHeight: "20px",
+                      padding: "16px 0",
+                      textAlign: "center",
+                      textDecoration: "none",
+                      display: "block",
+                      color: "#168cf0",
+                      fontWeight: 700,
+                      fontSize: "14px"
+                    }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View post on Instagram (@wunple_care) ↗
+                  </a>
                 </div>
-              </div>
-            </a>
+              </blockquote>
+            </div>
           ))}
         </div>
       </div>
+
+      <Script
+        src="https://www.instagram.com/embed.js"
+        strategy="lazyOnload"
+        onLoad={() => {
+          if (typeof window !== "undefined" && (window as any).instgrm) {
+            (window as any).instgrm.Embeds.process();
+          }
+        }}
+      />
     </section>
   );
 }

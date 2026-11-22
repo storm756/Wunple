@@ -1130,11 +1130,32 @@ img {
   transform: translateY(-2px);
 }
 
-.instagram-grid {
+.instagram-grid,
+.instagram-embed-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
   margin-top: 40px;
+  justify-items: center;
+}
+
+.insta-embed-card {
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  justify-content: center;
+}
+
+.insta-embed-card iframe {
+  border-radius: 14px !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .instagram-embed-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 .insta-card {
