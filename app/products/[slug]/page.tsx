@@ -64,33 +64,34 @@ export default async function ProductDetailPage({ params }: Props) {
         {/* Product Hero Section */}
         <section className="product-detail-hero">
           <div className="container">
+            {/* Top Showcase Promo Banner (if available) */}
+            {product.bannerImage && (
+              <div className="product-banner-showcase">
+                <Image
+                  src={product.bannerImage}
+                  alt={`${product.name} Banner`}
+                  width={1200}
+                  height={450}
+                  priority
+                  className="product-banner-showcase-img"
+                />
+              </div>
+            )}
+
             <div className="product-hero-layout">
-              {/* Product Visual Gallery / Box */}
+              {/* Product Visual Box (Clean White Background Pack Shot) */}
               <div className="product-hero-media">
                 <div className="product-hero-image-card">
                   <Image
-                    src={product.bannerImage || product.image}
+                    src={product.image}
                     alt={product.name}
-                    width={700}
-                    height={400}
+                    width={500}
+                    height={500}
                     priority
                     className="product-hero-main-img"
                     style={{ objectFit: "contain" }}
                   />
                 </div>
-                {product.bannerImage && (
-                  <div className="product-thumbnail-row">
-                    <div className="thumbnail-box active">
-                      <Image
-                        src={product.image}
-                        alt={`${product.name} pack`}
-                        width={120}
-                        height={120}
-                        style={{ objectFit: "contain" }}
-                      />
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Product Overview & Actions */}
@@ -145,7 +146,7 @@ export default async function ProductDetailPage({ params }: Props) {
                         rel="noopener noreferrer"
                         className="btn-order-wa"
                       >
-                        <span>Contact Us for Order</span>
+                        <span>Contact Us</span>
                         <span className="btn-icon">💬</span>
                       </a>
                       <a href="tel:+917718894017" className="btn-order-call">

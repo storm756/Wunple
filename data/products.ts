@@ -1,7 +1,7 @@
 export interface Product {
   id: string;
   name: string;
-  category: "PET CARE" | "SPOT ON CARE" | "ANTISEPTIC SPRAYS" | "ORAL CARE & ANTIBIOTICS" | "ORAL SUSPENSION";
+  category: "PET CARE" | "SPOT ON CARE" | "ANTIFUNGAL & ANTIBACTERIAL SPRAY" | "ORAL CARE & ANTIBIOTICS" | "ORAL SUSPENSION";
   image: string;
   bannerImage?: string;
   amazonUrl?: string;
@@ -113,13 +113,13 @@ export const ALL_PRODUCTS: Product[] = [
   },
   {
     id: "chlox-antiseptic-spray",
-    name: "CHLOX Antiseptic Spray",
-    category: "ANTISEPTIC SPRAYS",
+    name: "CHLOX Antifungal & Antibacterial Spray",
+    category: "ANTIFUNGAL & ANTIBACTERIAL SPRAY",
     image: "/images/product-chlox-spray.png",
     bannerImage: "/images/banner-chlox-spray.jpg",
     contactOrder: true,
     subtitle: "Ketoconazole & Chlorhexidine Gluconate spray for Malassezia, yeast infections, itching & hot spots.",
-    dosageForm: "Topical Antiseptic Spray",
+    dosageForm: "Topical Antifungal & Antibacterial Spray",
     packSize: "100 ml",
     species: "Dogs & Cats",
     composition: "Ketoconazole & Chlorhexidine Gluconate Spray (Vet)",
@@ -165,8 +165,11 @@ export const ALL_PRODUCTS: Product[] = [
   }
 ];
 
-export const BEST_SELLERS: Product[] = [
-  ALL_PRODUCTS[0], // Coat Ease
-  ALL_PRODUCTS[2], // Selamide Spot On
-  ALL_PRODUCTS[3]  // WUNCEF Dry Syrup
+export const NEW_LAUNCHES: Product[] = [
+  ALL_PRODUCTS[3], // WUNCEF Dry Syrup
+  ALL_PRODUCTS[4], // CHLOX Spray
+  ALL_PRODUCTS[5], // PORXOLYN-20 Oral Suspension
+  ALL_PRODUCTS[2]  // Selamide Spot On
 ];
+
+export const BEST_SELLERS = NEW_LAUNCHES;

@@ -2506,6 +2506,18 @@ img {
     padding: 16px;
   }
 
+  .product-badge {
+    font-size: 8.5px;
+    padding: 3px 6px;
+    letter-spacing: 0.3px;
+    top: 8px;
+    left: 8px;
+    max-width: calc(100% - 44px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .product-info {
     padding: 14px 14px;
   }
@@ -2926,7 +2938,23 @@ next-route-announcer {
 }
 
 .product-detail-hero {
-  padding: 50px 0;
+  padding: 40px 0 60px;
+}
+
+.product-banner-showcase {
+  margin-bottom: 36px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+}
+
+.product-banner-showcase-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .product-hero-layout {

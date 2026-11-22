@@ -8,22 +8,22 @@ export default function InstagramFeed() {
     {
       id: 1,
       image: "/images/hero-beagle.png",
-      caption: "Bath day done right with Wunple Coat Ease! 🐶✨"
+      caption: "Bath day done right with Wunple Coat Ease! 🐶✨ #PetCare"
     },
     {
       id: 2,
       image: "/images/corgi-bath.png",
-      caption: "Bubble bath happiness for this happy corgi. 🛁"
+      caption: "Bubble bath happiness for this happy corgi. 🛁🐾 #WunplePets"
     },
     {
       id: 3,
-      image: "/images/product-selamide.jpg",
-      caption: "Say goodbye to pesky fleas & mites with Selamide! 🐱❤️"
+      image: "/images/banner-selamide.jpg",
+      caption: "Targeted parasite care: keeping curious cats safe & scratch-free! 🐱🌿 #Selamide"
     },
     {
       id: 4,
-      image: "/images/about-contact-hero.jpg",
-      caption: "Playtime essentials for happier, healthier pets. 🎾🐾"
+      image: "/images/banner-chlox-spray.jpg",
+      caption: "Soothe sensitive skin, hot spots & yeast infections fast. 🐕❤️ #PetWellness"
     }
   ];
 

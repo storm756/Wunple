@@ -22,7 +22,11 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="product-image-box">
         {/* Category / Status Badge */}
         <span className={`product-badge ${product.isComingSoon ? "badge-soon" : "badge-active"}`}>
-          {product.isComingSoon ? "COMING SOON" : product.category}
+          {product.isComingSoon
+            ? "COMING SOON"
+            : product.category === "ANTIFUNGAL & ANTIBACTERIAL SPRAY"
+            ? "ANTIFUNGAL SPRAY"
+            : product.category}
         </span>
 
         {/* Wishlist Heart Button */}
@@ -71,9 +75,9 @@ export default function ProductCard({ product }: ProductCardProps) {
               target="_blank"
               rel="noopener noreferrer"
               className="buy-amazon-btn btn-contact-order"
-              title={`Contact Us for Order - ${product.name}`}
+              title={`Contact Us - ${product.name}`}
             >
-              <span className="btn-text">Contact Us for Order</span>
+              <span className="btn-text">Contact Us</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
               </svg>

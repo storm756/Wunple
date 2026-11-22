@@ -84,7 +84,7 @@ export default function Footer() {
           <ul className="footer-list">
             <li><Link href="/products/selamide-spot-on">Selamide Spot On (Cat)</Link></li>
             <li><Link href="/products/wuncef-dry-syrup">WUNCEF® Dry Syrup</Link></li>
-            <li><Link href="/products/chlox-antiseptic-spray">CHLOX Antiseptic Spray</Link></li>
+            <li><Link href="/products/chlox-antiseptic-spray">CHLOX Antifungal &amp; Antibacterial Spray</Link></li>
             <li><Link href="/products/coat-ease">Coat Ease Pet Shampoo</Link></li>
             <li><a href={amazonStoreUrl} target="_blank" rel="noopener noreferrer">Amazon Storefront ↗</a></li>
           </ul>

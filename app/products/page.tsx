@@ -17,7 +17,7 @@ export default function ProductsCataloguePage() {
     { id: "ALL", label: "All Products" },
     { id: "PET CARE", label: "Grooming & Shampoos" },
     { id: "SPOT ON CARE", label: "Spot-On Parasite Care" },
-    { id: "ANTISEPTIC SPRAYS", label: "Antiseptic Sprays" },
+    { id: "ANTIFUNGAL & ANTIBACTERIAL SPRAY", label: "Antifungal & Antibacterial Sprays" },
     { id: "ORAL CARE & ANTIBIOTICS", label: "Oral Antibiotics" },
     { id: "ORAL SUSPENSION", label: "Oral Suspensions" }
   ];
@@ -107,7 +107,7 @@ export default function ProductsCataloguePage() {
                       rel="noopener noreferrer"
                       className="btn-spotlight-order"
                     >
-                      Contact Us for Order 💬
+                      Contact Us 💬
                     </a>
                     <Link href="/products/wuncef-dry-syrup" className="btn-spotlight-link">
                       View Details →

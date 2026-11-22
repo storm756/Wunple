@@ -20,12 +20,12 @@ export default function Home() {
       <SlidingBanner />
 
       <main className="main-content">
-        {/* Best Selling Products Section */}
-        <section className="section-padding bg-light" id="bestsellers">
+        {/* New Launch Products Section */}
+        <section className="section-padding bg-light" id="new-launches">
           <div className="container">
             <div className="section-header-centered">
-              <span className="section-subtitle">Top Customer Favorites</span>
-              <h2 className="section-title">Best Selling Products</h2>
+              <span className="section-subtitle">Our Latest Formulations</span>
+              <h2 className="section-title">New Launch</h2>
               <p className="section-desc">
                 Clinically tested and trusted by pet parents across India for sensitive coats, parasite defense, and wellness.
               </p>
