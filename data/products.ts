@@ -60,7 +60,7 @@ export const ALL_PRODUCTS: Product[] = [
     id: "selamide-spot-on",
     name: "Selamide Spot On",
     category: "SPOT ON CARE",
-    image: "/images/product-selamide-box.jpg",
+    image: "/images/product-selamide-v2.png",
     bannerImage: "/images/banner-selamide.jpg",
     amazonUrl: "https://amzn.in/d/0iZx5H5E",
     subtitle: "Selamectin 6% focused parasite care against fleas, mites & worms for cats.",
