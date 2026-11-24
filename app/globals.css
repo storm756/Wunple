@@ -62,11 +62,16 @@ h1, h2, h3, h4, h5, h6,
 .founder-name,
 .shop-hero-title,
 .form-card-title,
-.info-card-title,
-.product-title {
+.info-card-title {
   font-family: 'DM Serif Display', Georgia, serif;
   font-weight: 400; /* DM Serif Display only has Regular & Italic — weight comes from the letterform design itself */
   letter-spacing: -0.02em;
+}
+
+.product-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 a {
@@ -600,11 +605,22 @@ img {
 }
 
 .product-title {
+  font-family: 'DM Serif Display', Georgia, serif;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 400; /* DM Serif Display is already bold by nature; 800 triggers faux-bold ligature bugs in WebKit */
+  letter-spacing: 0;
   color: var(--text-main);
   margin: 0 0 8px 0;
-  line-height: 1.3;
+  line-height: 1.35;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.product-title a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .product-subtitle {
@@ -2523,8 +2539,8 @@ img {
   }
 
   .product-image-box {
-    height: 170px;
-    padding: 16px;
+    height: 175px;
+    padding: 18px 14px 10px;
   }
 
   .product-badge {
@@ -2544,7 +2560,10 @@ img {
   }
 
   .product-title {
-    font-size: 13px;
+    font-size: 13.5px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.35;
     margin-bottom: 6px;
   }
 
